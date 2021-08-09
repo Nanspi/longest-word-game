@@ -1,0 +1,12 @@
+<h1>New Game</h1>
+<div class="question">
+<p><%= @random_letter %></p>
+
+<p>what is the longuest word you can find ?</p>
+<form action="/score" method="post">
+  <input type="text" name="word" placeholder="type here">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :hidden_message, @random_letter %>
+  <input type="submit">
+</form>
+</div>
